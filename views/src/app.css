@@ -1,0 +1,299 @@
+body {
+    background: url(escheresque_ste.png);
+    overflow: hidden;
+}
+
+#init {
+    width: 50%; 
+    height: 100vh;
+}
+
+#init-card {
+    display: none;
+}
+
+#app-container {
+    display: none;
+}
+
+.input-field input[type=text]:focus + label {
+ color: #66F;
+}
+
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #66F;
+ box-shadow: 0 1px 0 0 #66F;
+}
+
+#preloader {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#server-list-div {
+    position: fixed;
+    bottom: 4px;
+    display: flex;
+    height: 56px;
+    width: 100%;
+    justify-content: center;
+    padding: 4px 0;
+    z-index: 5;
+}
+
+#server-list-div a {
+    height: 48px;
+    width: 48px;
+    margin: 0px 2px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    background: crimson;
+    border-radius: 50%;
+}
+
+#server-list-div a span {
+    margin: auto
+}
+
+
+#server-pane {
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    padding: 0 .25rem;
+}
+
+#server-pane .col[id*="-col"] {
+    padding: 0 .5rem;
+}
+
+#server-chat {
+    height: calc(100vh - 56px - 1em);
+}
+
+
+.collection {
+    border: 1px solid #656565;
+}
+
+.collection .collection-item {
+    border-bottom: 0px;
+    padding: 5px 15px;
+}
+
+.collection .collection-item:hover {
+    background-color: #3f3f3f;
+}
+
+
+
+#server-channels {
+    height: calc(100vh - 56px - 1em);
+    overflow: hidden;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+#server-channels:hover{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#server-channels::-webkit-scrollbar-track
+{
+
+    background-color: #424242 !important;
+}
+
+#server-channels::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #424242 !important;
+}
+
+#server-channels::-webkit-scrollbar-thumb
+{
+    background-color: #26a69a;
+}
+
+.left-panel {
+    height: 48px; 
+    width: 48px;
+    overflow: hidden;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.right-panel{
+    display: flex; 
+    flex-direction: column;
+    padding-left: 1em;
+    margin-top: -.2em;
+}
+
+
+#server-chatarea::-webkit-scrollbar-track
+{
+
+    background-color: #424242 !important;
+}
+
+#server-chatarea::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #424242 !important;
+}
+
+#server-chatarea::-webkit-scrollbar-thumb
+{
+    background-color: #26a69a;
+}
+
+
+.msg-cluster {
+    padding: .4rem .2rem;
+}
+
+.message-span{
+    font-weight: 500;
+    margin-bottom: -.1em;
+    margin-top: -.1em;
+}
+
+span.message-content {
+    line-height: 1.1em;
+    color: #ccc;
+}
+
+div#server-chatarea {
+    max-height: calc(100vh - 58px - 1em);
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+div#server-chatarea:hover {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+span.message-span {
+    font-size: medium;
+}
+
+.left-panel img {
+    border-radius: 4px;
+    
+}
+
+.message-span .time {
+    padding-left: .5em;
+    color: gray;
+    font-size: x-small;
+}
+
+.collection {
+    border: 0px solid #656565;
+    border-right: 1px solid #656565;
+}
+
+
+#txt-chatbox {
+    min-height: 0px;
+    height: 1em;
+}
+
+.cluster-container {
+    min-height: 56px;
+}
+
+.magic-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: calc(100vh - 56px);
+}
+
+.collapsible {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    margin: .5rem 0 1rem 0;
+}
+
+.collapsible-header {
+    border-bottom: 1px solid #656565;
+
+}
+
+.collapsible-body {
+    border-bottom: 1px solid #656565;
+    padding: 0rem;
+}
+
+#spm-members {
+    max-height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#spm-members li {
+        min-height: 0px;
+}
+
+.scroll-mod::-webkit-scrollbar-track
+{
+
+    background-color: #424242 !important;
+}
+
+.scroll-mod::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #424242 !important;
+}
+
+.scroll-mod::-webkit-scrollbar-thumb
+{
+    background-color: #26a69a;
+}
+
+#serverpanel-hotstuff {
+    max-height: 70vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#server-info-col div .card-content {
+    padding: 1em;
+    padding-bottom: .3em;
+}
+
+.time p {
+    line-height: .5em;
+    display: inline;
+}
+
+.message-content p {
+    margin: 0;
+}
+
+img.emoji {
+    height: 24px;
+    margin-bottom: -.4em;
+}
+
+.active-channel {
+    border-left: 2px solid #01579b;
+}
+
+blockquote {
+    color: limegreen;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MiteMite Demo!</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="src/app.css">
+    <style type="text/css">
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="init" class="container valign-wrapper">
+        <div id="init-card" class="card" style="width: 100%">
+            <div class="card-content">
+                <span class="card-title">Dissonance</span>
+                <div class="row">
+                    <div class="input-field col s6">
+                      <input id="email" type="text" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="password" type="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                </div>
+                
+                <a style="font-size: small;" onclick="Materialize.toast('Oh noooo', 1000)" href="#">Need help?</a>
+            </div>
+            <div class="card-action right">
+                <button id="token-continue" class="btn btn-flat">login</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader" class="valign-wrapper">
+        <div class="pre center-align white-text" style="width: 100%; margin: auto;">
+            <h3>Loading</h3>
+            <div style="width: 100%">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <span id="preload-status">Dissonance is ramping up.</span>
+        </div>
+    </div>
+
+
+    <div id="app-container">
+        <div id="server-list-div">
+                
+        </div>
+
+        <div id="server-pane" class="row">
+
+            <div id="server-chat-col" class="col s9">
+                <div id="server-chat" class="card row grey darken-3">
+                    <div id="server-chat-content" card="card-content">
+
+                        <div id="server-channels" class="grey darken-4 collection col s3">
+                        
+                        </div>
+                        <div class="magic-container col s9">
+                            <div id="server-chatbox-container">
+                                
+                            </div>
+
+                            <div id="server-chatarea" class="col s12">
+                        
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="server-info-col" class="col s3">
+                <div class="card blue grey darken-3">
+
+                    <div class="card-content">
+                        <span id="server-title" class="card-title white-text">
+                            
+                        </span>
+                    </div>
+                    <ul class="collapsible grey darken-3 grey-text text-lighten-3" data-collapsible="accordion">
+                        <li class="">
+                            <div class="collapsible-header grey darken-3"><i class="material-icons">info_outline</i>Info</div>
+                            <div id="serverpanel-info" class="collapsible-body" style="display: block;">
+                                <div><strong>Server ID: </strong><span id="spi-id">0</span></div>
+                                <div><strong>Owner: </strong><span id="spi-owner"></span></div>
+                                <div><strong>Created: </strong><span id="spi-created_at"></span></div>
+                                <div><strong>Members: </strong><span id="spi-members">0</span></div>
+                                <div id="spi-roles"></div>
+                        </li>
+                        <li class="">
+                            <div class="collapsible-header grey darken-3"><i class="material-icons">perm_identity</i>Members</div>
+                            <div id="serverpanel-members" class="collapsible-body" style="display: none;">
+                                <ul id="spm-members" class="collection scroll-mod">
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="">
+                            <!--What does other people do in other channels-->
+                            <div id="hot-toggle" class="collapsible-header grey darken-3"><i class="material-icons">whatshot</i>Overview</div>
+                            <div id="serverpanel-hotstuff" class="collapsible-body scroll-mod" style="display: none;">
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>  
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        </script>
+    <script src="src/drag-arrange.min.js"></script>
+</body>
+</html>
